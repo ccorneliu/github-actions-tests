@@ -18,7 +18,8 @@ jobs:
     steps:
       - name: Run unit tests
         run: |
-          echo "${{ github.event.commits.modified }}"
+          # display the paths of the modified files in the last commit
+          echo "${{ github.event.commits[0].modified }}"
           echo "Running unit tests"
   run-ui-tests:
     # just echo the name of the job

@@ -19,7 +19,7 @@ jobs:
       - name: Run unit tests
         run: |
           if [ "${{ github.event.commits }}" != "null" ]; then
-            echo "Last commit message: ${{ github.event.commits[0].message }}"
+            echo "First modified file: ${{ github.event.commits[0].modified[0] }}"
           else
             echo "No commits found in the event."
           fi

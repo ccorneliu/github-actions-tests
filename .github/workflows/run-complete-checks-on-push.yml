@@ -20,7 +20,7 @@ jobs:
             # The commits array is an array of commit objects describing the pushed commits.
             # A commit object has a property called "modified". "modified" is an array of files modified by the commit.
             # print the modified files for each commit.
-            for commit in "${{ github.event.commits[@] }}"; do
+            for commit in "${{ github.event.commits[*] }}"; do
               echo "Commit message: $commit.message"
               echo "Modified files: $commit.modified"
             done

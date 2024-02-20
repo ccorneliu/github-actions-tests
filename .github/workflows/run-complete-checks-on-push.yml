@@ -12,26 +12,19 @@ on:
 
 jobs:
   run-unit-tests:
-    # just echo the name of the job
-    # run on ubuntu-latest
     runs-on: ubuntu-latest
     steps:
       - name: Run unit tests
         run: |
           if [ "${{ github.event.commits }}" != "null" ]; then
-            echo "First modified file: ${{ github.event.commits[0].modified[0] }}"
+            # The commits array is an array of commit objects describing the pushed commits.
+            # A commit object has a property called "modified". "modified" is an array of files modified by the commit.
+            # print the modified files for each commit.
+            for commit in ${{ github.event.commits }}; do
+              echo "Commit message: $commit.message"
+              echo "Modified files: $commit.modified"
+            done
           else
             echo "No commits found in the event."
           fi
           echo "Running unit tests"
-  run-ui-tests:
-    # just echo the name of the job
-    # run on ubuntu-latest
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run UI tests
-        run: echo "Running UI tests"
-
-concurrency: # When we push something new in short succession in the same branch or PR, we cancel any previously-running job from that branch or PR so we don't pay to finish a job we no longer care about the outcome of.
-  group: build-${{ github.event.commits.modified }}
-  cancel-in-progress: true

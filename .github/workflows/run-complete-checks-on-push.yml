@@ -1,10 +1,12 @@
 name: Perform complete checks
 
 on:
-  pull_request:
+  push:
     branches:
       - master
-    types: [opened, reopened]
+      - develop
+      - hotfix/**
+      - release/**
 
 jobs:
   run-unit-tests:

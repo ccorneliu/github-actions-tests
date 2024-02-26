@@ -1,30 +1,30 @@
-name: Perform complete checks on push
+name: Perform complete checks
 
 on:
   push:
     branches:
-      - main
+      - master
       - develop
       - hotfix
       - release
-    paths-ignore: # Don't run the test suite on changes which are exclusively to:
-      - 'README.md'
 
 jobs:
   run-unit-tests:
-    # just echo the name of the job
-    # run on ubuntu-latest
     runs-on: ubuntu-latest
     steps:
       - name: Run unit tests
-        run: echo "Running unit tests"
+        run: |
+          echo "${{toJSON(github.event)}}"
+          echo "Running unit tests"
+          # make the step fail
+          exit 1
   run-ui-tests:
-    # just echo the name of the job
-    # run on ubuntu-latest
     runs-on: ubuntu-latest
     steps:
       - name: Run UI tests
-        run: echo "Running UI tests"
+        run: |
+          echo "${{toJSON(github.event)}}"
+          echo "📲 Running UI tests"
 
 concurrency: # When we push something new in short succession in the same branch or PR, we cancel any previously-running job from that branch or PR so we don't pay to finish a job we no longer care about the outcome of.
   group: build-${{ github.event.pull_request.number || github.ref }}

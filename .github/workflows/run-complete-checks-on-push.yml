@@ -5,8 +5,8 @@ on:
     branches:
       - master
       - develop
-      - hotfix/**
-      - release/**
+      - hotfix
+      - release
 
 jobs:
   run-unit-tests:

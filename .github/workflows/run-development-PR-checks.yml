@@ -4,8 +4,8 @@ on:
   pull_request:
     branches:
       - develop
-      - hotfix/**
-      - release/**
+      - hotfix
+      - release
     types: [opened, synchronize, reopened]
 
 jobs:

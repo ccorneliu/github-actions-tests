@@ -4,13 +4,10 @@ on:
   push:
     branches:
       - master
-      - develop
-      - hotfix
-      - release
   pull_request:
     branches:
       - master
-    types: [opened, reopened]
+    types: [opened, synchronize, reopened]
 
 jobs:
   run-unit-tests:

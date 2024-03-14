@@ -1,6 +1,12 @@
 name: Perform complete checks
 
 on:
+  push:
+    branches:
+      - master
+      - develop
+      - hotfix
+      - release
   pull_request:
     branches:
       - master
@@ -14,8 +20,7 @@ jobs:
         run: |
           echo "${{toJSON(github.event)}}"
           echo "Running unit tests"
-          # make the step fail
-          exit 1
+          echo "Unit tests completed"
   run-ui-tests:
     runs-on: ubuntu-latest
     steps:

@@ -3,14 +3,11 @@ name: Perform complete checks
 on:
   push:
     branches:
-      - master
-      - develop
-      - hotfix
-      - release
+      - main
   pull_request:
     branches:
-      - master
-    types: [opened, reopened]
+      - main
+    types: [opened, synchronize, reopened]
 
 jobs:
   run-unit-tests:

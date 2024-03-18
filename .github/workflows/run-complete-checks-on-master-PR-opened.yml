@@ -15,7 +15,6 @@ jobs:
     steps:
       - name: Run unit tests
         run: |
-          echo "${{toJSON(github.event)}}"
           echo "Running unit tests"
           echo "Unit tests completed"
   run-ui-tests:
@@ -23,7 +22,6 @@ jobs:
     steps:
       - name: Run UI tests
         run: |
-          echo "${{toJSON(github.event)}}"
           echo "📲 Running UI tests"
 
 concurrency: # When we push something new in short succession in the same branch or PR, we cancel any previously-running job from that branch or PR so we don't pay to finish a job we no longer care about the outcome of.

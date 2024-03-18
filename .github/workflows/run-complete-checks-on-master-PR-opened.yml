@@ -4,13 +4,10 @@ on:
   push:
     branches:
       - master
-      - develop
-      - hotfix
-      - release
   pull_request:
     branches:
       - master
-    types: [opened, reopened]
+    types: [opened, synchronize, reopened]
 
 jobs:
   run-unit-tests:
@@ -20,7 +17,6 @@ jobs:
         run: |
           echo "${{toJSON(github.event)}}"
           echo "Running unit tests"
-          sleep 30
           echo "Unit tests completed"
   run-ui-tests:
     runs-on: ubuntu-latest

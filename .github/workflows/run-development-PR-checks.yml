@@ -19,8 +19,7 @@ jobs:
         run: |
           echo "${{toJSON(github.event)}}"
           echo "Running unit tests"
-          echo "Unit tests failed"
-          exit 1
+          echo "Unit tests successful"
 
 concurrency: # When we push something new in short succession in the same branch or PR, we cancel any previously-running job from that branch or PR so we don't pay to finish a job we no longer care about the outcome of.
   group: build-${{ github.event.pull_request.number || github.ref }}

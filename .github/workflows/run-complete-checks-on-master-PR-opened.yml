@@ -1,4 +1,4 @@
-name: Perform complete checks
+name: Perform deployment checks
 
 on:
   push:

@@ -1,9 +1,10 @@
-name: Perform complete checks
+name: Perform deployment checks
 
 on:
   push:
     branches:
       - main
+      - develop
   pull_request:
     branches:
       - main

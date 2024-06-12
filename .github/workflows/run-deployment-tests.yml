@@ -1,14 +1,13 @@
-name: Perform development checks
+name: Perform deployment checks
 
 on:
   push:
     branches:
+      - main
       - develop
   pull_request:
     branches:
-      - develop
-      - hotfix
-      - release
+      - main
     types: [opened, synchronize, reopened]
 
 jobs:

@@ -6,8 +6,6 @@ on:
 jobs:
   upload_beta_build:
     uses: slumberGroup/reusableWorkflows/.github/workflows/shared-upload-beta-build.yml@feature/sc-35092-automate_uploading_TF_build_for_pull_requests
-    with:
-      # Define any inputs you need to pass to the reusable workflow, if any
     secrets:
       GH_TOKEN: ${{ secrets.PAT }}
 

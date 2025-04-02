@@ -1,4 +1,4 @@
-# This is a project used to test GitHub Actions
+# This is a project used to test GitHub Actions and other tools
 
 Tests:
 - Test 1

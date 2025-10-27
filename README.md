@@ -9,4 +9,5 @@ Tests:
 
 We're trying it out.
 
-This is fix no. 1
+This is fix no. 1.
+Change added in 1.1.0

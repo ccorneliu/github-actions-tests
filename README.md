@@ -9,4 +9,6 @@ Tests:
 
 We're trying it out.
 
+Change included only in 1.0.3
+
 This is fix no. 1

@@ -11,4 +11,6 @@ We're trying it out.
 
 Change included only in 1.0.3
 
+Change included only in 1.0.4
+
 This is fix no. 1

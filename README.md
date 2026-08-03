@@ -1,5 +1,3 @@
-# This is a project used to test GitHub Actions and other tools
+# GitHub Actions testing sandbox
 
-I am using this to test the GitHub Actions workflow and other tools that I am learning about. This project is not meant to be used for anything else.
-
-I used it to test branch rules, pull requests, and other features of GitHub Actions. I also used it to test some other tools that I am learning about.
+This repository is a sandbox for testing GitHub Actions workflows, branch rules, pull request behavior, and related tooling experiments. It exists for learning and validation, not as a production project.

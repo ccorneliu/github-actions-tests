@@ -1,13 +1,3 @@
-# This is a project used to test GitHub Actions and other tools
+# GitHub Actions testing sandbox
 
-Tests:
-- Test 1
-- Test 2
-- Test 3
-
-## Trunk based development
-
-We're trying it out.
-
-This is fix no. 1.
-Change added in 1.1.0
+This repository is a sandbox for testing GitHub Actions workflows, branch rules, pull request behavior, and related tooling experiments. It exists for learning and validation, not as a production project.

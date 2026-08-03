@@ -1,13 +1,5 @@
 # This is a project used to test GitHub Actions and other tools
 
-Tests:
-- Test 1
-- Test 2
-- Test 3
+I am using this to test the GitHub Actions workflow and other tools that I am learning about. This project is not meant to be used for anything else.
 
-## Trunk based development
-
-We're trying it out.
-
-This is fix no. 1.
-Change added in 1.1.0
+I used it to test branch rules, pull requests, and other features of GitHub Actions. I also used it to test some other tools that I am learning about.
